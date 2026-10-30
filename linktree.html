@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 25th Studio | Links</title>
+<meta name="description" content="The 25th Studio. Growth marketing para negocios en Miami y LATAM. Encuéntranos aquí y pide tu mapa gratis.">
+<meta property="og:title" content="The 25th Studio | Encuéntranos">
+<meta property="og:description" content="WhatsApp, Instagram, LinkedIn y tu mapa gratis de crecimiento. Miami y LATAM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Mr+Dafoe&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f3473;--ink-2:#3b4a6e;--muted:#66708f;
+    --paper:#ffffff;--paper-2:#f6f4f1;--line:#e5e3de;
+    --rosa:#ffccfd;--rosa-2:#ffe6fe;--lila:#b9a7f0;--lila-2:#ece6ff;
+    --periwinkle:#8399ff;--celeste:#b3e1ff;--violeta:#c9aaff;
+    --wa:#25D366;
+    --grad:linear-gradient(90deg,var(--violeta) 0%,var(--paper) 25%,var(--rosa) 50%,var(--celeste) 75%,var(--periwinkle) 100%);
+    --sans:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --serif:"Instrument Serif",Georgia,serif;
+    --script:"Mr Dafoe","Brush Script MT",cursive;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--sans);color:var(--ink);background:var(--paper-2);
+    min-height:100vh;display:flex;justify-content:center;padding:0 16px 40px;
+  }
+  /* Video de fondo */
+  .bg-video{
+    position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;
+  }
+  .bg-overlay{
+    position:fixed;inset:0;z-index:-1;
+    background:
+      linear-gradient(180deg,#f6f4f1cc 0%,#f6f4f1e6 45%,#f6f4f1f2 100%),
+      var(--grad);
+    background-blend-mode:normal,soft-light;
+    backdrop-filter:blur(3px);
+  }
+  .wrap{width:100%;max-width:420px;display:flex;flex-direction:column;align-items:center;padding-top:48px}
+
+  /* Perfil */
+  .avatar{
+    width:92px;height:92px;border-radius:50%;display:grid;place-items:center;
+    background:var(--ink);color:#fff;font-family:var(--serif);font-size:34px;
+    box-shadow:0 0 0 5px #ffffffcc;
+  }
+  .avatar sup{font-size:14px;font-family:var(--sans);font-weight:600;margin-left:1px}
+  .name{font-family:var(--serif);font-size:38px;line-height:1;margin-top:16px;text-align:center}
+  .name em{font-family:var(--script);font-style:normal;color:var(--periwinkle);margin-left:4px}
+  .bio{font-size:14px;color:var(--ink-2);margin-top:10px;text-align:center;line-height:1.5}
+  .markets{display:flex;gap:8px;justify-content:center;margin-top:12px}
+  .markets span{font-size:12px;font-weight:600;padding:5px 12px;border-radius:999px;background:#ffffffcc;border:1px solid var(--line)}
+
+  /* Mapa gratis destacado */
+  .map{
+    position:relative;overflow:hidden;width:100%;margin-top:26px;padding:22px 20px;border-radius:28px;
+    background:var(--ink);color:#fff;text-decoration:none;display:block;
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .map:hover{transform:translateY(-3px);box-shadow:0 18px 36px -14px #0f3473aa}
+  .map::after{
+    content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;
+    background:var(--grad);opacity:.35;filter:blur(10px);
+  }
+  .map .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;background:var(--rosa);color:var(--ink);padding:5px 10px;border-radius:999px}
+  .map h2{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.05;margin-top:12px}
+  .map h2 i{color:var(--rosa)}
+  .map p{font-size:13.5px;color:#cfd8f0;line-height:1.5;margin-top:8px;position:relative;z-index:1}
+  .steps{display:flex;gap:4px;align-items:center;flex-wrap:wrap;margin-top:14px;position:relative;z-index:1}
+  .steps b{font-size:11.5px;font-weight:500;padding:5px 9px;border-radius:999px;background:#ffffff1a}
+  .steps i{font-style:normal;color:var(--lila);font-size:12px}
+  .map .cta{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:600;font-size:14.5px;background:#fff;color:var(--ink);padding:11px 18px;border-radius:999px;position:relative;z-index:1}
+
+  /* Links */
+  .label{width:100%;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:26px 0 10px 4px}
+  .links{width:100%;display:flex;flex-direction:column;gap:10px}
+  .link{
+    display:flex;align-items:center;gap:14px;padding:13px 16px;border-radius:20px;
+    background:var(--paper);border:1px solid var(--line);color:var(--ink);text-decoration:none;
+    transition:transform .3s var(--ease),border-color .3s var(--ease);
+  }
+  .link:hover{transform:translateY(-2px);border-color:var(--periwinkle)}
+  .ico{width:34px;height:34px;display:grid;place-items:center;flex-shrink:0}
+  .ico svg{width:30px;height:30px;fill:var(--periwinkle)}
+  .c1{background:var(--lila-2)}.c2{background:var(--rosa-2)}.c3{background:#e3f3ff}.c4{background:var(--paper-2)}
+  .txt strong{display:block;font-size:15px;font-weight:600}
+  .txt small{color:var(--muted);font-size:12.5px}
+  .arrow{margin-left:auto;color:var(--muted);font-size:18px}
+
+  footer{margin-top:30px;text-align:center;font-size:12px;color:var(--muted);line-height:1.8}
+  footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--lila)}
+
+
+  /* Botón compartir */
+  .wrap{position:relative}
+  .share-btn{
+    position:absolute;top:16px;right:0;width:42px;height:42px;border-radius:50%;
+    display:grid;place-items:center;background:#ffffffcc;border:1px solid var(--line);
+    cursor:pointer;backdrop-filter:blur(6px);transition:transform .3s var(--ease);
+  }
+  .share-btn:hover{transform:scale(1.06)}
+  .share-btn svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+  /* Modal compartir */
+  .modal-bg{
+    position:fixed;inset:0;z-index:50;background:#0f347333;backdrop-filter:blur(4px);
+    display:flex;align-items:center;justify-content:center;padding:16px;
+    opacity:0;pointer-events:none;transition:opacity .25s var(--ease);
+  }
+  .modal-bg.open{opacity:1;pointer-events:auto}
+  .modal{
+    width:100%;max-width:380px;max-height:92vh;overflow:auto;background:var(--paper);
+    border-radius:24px;padding:22px 16px 16px;position:relative;
+    box-shadow:0 30px 60px -20px #0f347366;transform:translateY(12px);transition:transform .3s var(--ease);
+  }
+  .modal-bg.open .modal{transform:none}
+  .m-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:0;background:none;cursor:pointer;border-radius:50%;display:grid;place-items:center}
+  .m-close:hover{background:var(--paper-2)}
+  .m-close svg{width:18px;height:18px;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
+  .m-head{text-align:center}
+  .m-avatar{width:56px;height:56px;border-radius:50%;margin:0 auto;display:grid;place-items:center;background:var(--ink);color:#fff;font-family:var(--serif);font-size:22px}
+  .m-avatar sup{font-size:10px;font-family:var(--sans);font-weight:600}
+  .m-title{font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;margin-top:12px}
+  .m-row{
+    display:flex;align-items:center;gap:12px;width:100%;padding:11px 12px;margin-top:8px;
+    border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);
+    font:500 14.5px var(--sans);text-decoration:none;cursor:pointer;text-align:left;
+    transition:border-color .2s var(--ease),background .2s var(--ease);
+  }
+  .m-row:hover{border-color:var(--periwinkle);background:#fafaff}
+  .m-row .sq{width:26px;height:26px;border-radius:6px;display:grid;place-items:center;flex-shrink:0}
+  .m-row .sq svg{width:16px;height:16px;fill:#fff}
+  .m-row .go{margin-left:auto;width:18px;height:18px;fill:none;stroke:var(--ink-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  .m-url{font-weight:700;margin-top:18px;overflow:hidden}
+  .m-url span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .m-div{height:1px;background:var(--line);margin:14px 0 6px}
+  .m-promo{display:flex;gap:10px;align-items:flex-start;padding:14px 4px 4px}
+  .m-promo strong{display:block;font-size:14px}
+  .m-promo small{font-size:12.5px;color:var(--muted)}
+  .m-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+  .m-actions a{display:grid;place-items:center;padding:12px;border-radius:12px;font-weight:600;font-size:14.5px;text-decoration:none}
+  .m-actions .primary{background:var(--ink);color:#fff}
+  .m-actions .ghost{border:1px solid var(--line);color:var(--ink)}
+  .toast{
+    position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:60;
+    background:var(--ink);color:#fff;font-size:13.5px;font-weight:500;padding:10px 16px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:all .3s var(--ease);
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}.bg-video{display:none}}
+</style>
+</head>
+<body>
+<!-- Video de fondo gratis (Mixkit, licencia libre): manos escribiendo en el celular -->
+<video class="bg-video" autoplay muted loop playsinline preload="auto"
+  poster="https://assets.mixkit.co/videos/51123/51123-thumb-720-0.jpg">
+  <source src="https://assets.mixkit.co/videos/51123/51123-720.mp4" type="video/mp4">
+</video>
+<div class="bg-overlay"></div>
+<main class="wrap">
+  <button class="share-btn" id="shareOpen" aria-label="Compartir">
+    <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+  </button>
+
+  <div class="avatar">25<sup>th</sup></div>
+  <h1 class="name">The 25th<em>Studio</em></h1>
+  <p class="bio">Del clic al cliente: web, WhatsApp y seguimiento automático.</p>
+  <div class="markets"><span>Miami</span><span>LATAM</span></div>
+
+  <!-- MAPA GRATIS -->
+  <a class="map" href="https://wa.me/59177643717?text=Hola%2C%20quiero%20mi%20mapa%20gratis%20de%20crecimiento." target="_blank" rel="noopener">
+    <span class="tag">Gratis</span>
+    <h2>Recibe tu <i>mapa gratis</i></h2>
+    <p>Te mostramos dónde se te escapan los clientes hoy, qué conviene automatizar primero y qué medir.</p>
+    <div class="steps">
+      <b>Anuncio</b><b>Web</b><b>WhatsApp</b><b>Venta</b>
+    </div>
+    <span class="cta">Quiero mi mapa</span>
+  </a>
+
+  <div class="label">Dónde encontrarnos</div>
+  <nav class="links">
+    <a class="link" href="https://wa.me/59177643717?text=Hola%20The%2025th%20Studio" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.29.14.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.12.07.7-.17 1.37z"/></svg></span>
+      <span class="txt"><strong>WhatsApp</strong></span>
+    </a>
+
+    <a class="link" href="https://TU-DOMINIO.com/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A7.99 7.99 0 0 1 5.07 16zm2.95-8H5.07a7.99 7.99 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56zM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4h-3.38z"/></svg></span>
+      <span class="txt"><strong>Sitio web</strong></span>
+    </a>
+
+    <a class="link" href="https://www.instagram.com/the25thstudio_" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></span>
+      <span class="txt"><strong>Instagram</strong></span>
+    </a>
+
+    <a class="link" href="https://www.youtube.com/@the25thstudio" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></span>
+      <span class="txt"><strong>YouTube</strong></span>
+    </a>
+
+    <a class="link" href="https://www.linkedin.com/in/sandynolasco" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9C2 21.3 2.7 22 3.55 22h16.9c.85 0 1.55-.7 1.55-1.55V3.55C22 2.7 21.3 2 20.45 2zM8.34 18.34H5.67V9.75h2.67v8.59zM7 8.58a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1zm11.34 9.76h-2.67v-4.18c0-1 0-2.28-1.39-2.28-1.39 0-1.6 1.09-1.6 2.21v4.25H10.0V9.75h2.56v1.17h.04c.36-.68 1.23-1.39 2.52-1.39 2.7 0 3.2 1.78 3.2 4.09v4.72z"/></svg></span>
+      <span class="txt"><strong>LinkedIn</strong></span>
+    </a>
+
+    <a class="link" href="mailto:perceptieagency@gmail.com">
+      <span class="ico"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></span>
+      <span class="txt"><strong>Correo</strong></span>
+    </a>
+  </nav>
+
+  <footer>
+    © <span id="y"></span> The 25th Studio · Miami y LATAM<br>
+    Diseñado por <a href="https://www.instagram.com/the25thstudio_" target="_blank" rel="noopener">The 25th Studio</a>
+  </footer>
+</main>
+
+<!-- Modal compartir -->
+<div class="modal-bg" id="shareModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <button class="m-close" id="shareClose" aria-label="Cerrar"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="m-head">
+      <div class="m-avatar">25<sup>th</sup></div>
+      <div class="m-title" id="mTitle">Comparte The 25th Studio</div>
+    </div>
+
+    <button class="m-row m-url" id="copyUrl"><span class="sq" style="background:var(--ink)"><svg viewBox="0 0 24 24"><path d="M5 5h3v3H5zM10.5 5h3v3h-3zM16 5h3v3h-3zM5 10.5h3v3H5zM16 10.5h3v3h-3zM5 16h3v3H5zM10.5 16h3v3h-3zM16 16h3v3h-3z"/></svg></span><span id="urlText"></span><svg class="go" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg></button>
+
+    <div class="m-div"></div>
+    <a class="m-row" id="shFb" href="#" target="_blank" rel="noopener"><span class="sq" style="background:#1877F2"><svg viewBox="0 0 24 24"><path d="M14 8h3V4.5h-3c-2.5 0-4 1.6-4 4V11H7.5v3.5H10V22h3.5v-7.5h2.8l.7-3.5h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></span>Compartir en Facebook<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shIg" href="https://www.instagram.com/direct/inbox/" target="_blank" rel="noopener"><span class="sq" style="background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285AEB 90%)"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></span>Compartir en Instagram<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shLi" href="#" target="_blank" rel="noopener"><span class="sq" style="background:#0A66C2"><svg viewBox="0 0 24 24"><path d="M6.5 8.5H3.6V20h2.9V8.5zM5 4a1.7 1.7 0 1 0 0 3.4A1.7 1.7 0 0 0 5 4zm15.4 9.3c0-3-1.6-4.9-4.3-4.9-1.4 0-2.4.8-2.8 1.5V8.5H10.5V20h2.9v-6c0-1.5.4-2.9 2.2-2.9 1.8 0 1.9 1.6 1.9 3V20h2.9v-6.7z"/></svg></span>Compartir en LinkedIn<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shX" href="#" target="_blank" rel="noopener"><span class="sq" style="background:#000"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.9L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></span>Compartir en X<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shWa" href="#" target="_blank" rel="noopener"><span class="sq" style="background:#25D366"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.04c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.14-.3.3-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.29.14.46.12.63-.07.17-.2.73-.85.92-1.14.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.12.07.7-.17 1.37z"/></svg></span>Compartir por WhatsApp<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shMs" href="#" target="_blank" rel="noopener"><span class="sq" style="background:linear-gradient(45deg,#0099FF,#A033FF,#FF5280)"><svg viewBox="0 0 24 24"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.1 7.1V22l2.9-1.6c1.2.3 2.5.5 4 .5 5.6 0 10-4.1 10-9.6S17.6 2 12 2zm1 12.9-2.5-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.5 5.8z"/></svg></span>Compartir por Messenger<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    <a class="m-row" id="shMail" href="#" target="_blank" rel="noopener"><span class="sq" style="background:var(--ink)"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg></span>Compartir por correo<svg class="go" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+
+    <div class="m-promo">
+      <div class="m-avatar" style="width:30px;height:30px;font-size:12px;margin:0;flex-shrink:0">25</div>
+      <div><strong>¿Quieres tu propio linktree?</strong><small>Lo diseñamos con tu marca y conectado a tu WhatsApp.</small></div>
+    </div>
+    <div class="m-actions">
+      <a class="primary" href="https://wa.me/59177643717?text=Hola%2C%20quiero%20mi%20propio%20linktree." target="_blank" rel="noopener">Lo quiero</a>
+      <a class="ghost" href="https://www.instagram.com/the25thstudio_" target="_blank" rel="noopener">Ver más</a>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast">Enlace copiado</div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  const url=location.href.split('#')[0];
+  const txt='The 25th Studio: web, WhatsApp y seguimiento automático para Miami y LATAM';
+  const u=encodeURIComponent(url), t=encodeURIComponent(txt);
+  const $=id=>document.getElementById(id);
+  $('urlText').textContent=url.replace(/^https?:\/\//,'').replace(/\/$/,'');
+  $('shFb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
+  $('shLi').href='https://www.linkedin.com/sharing/share-offsite/?url='+u;
+  $('shX').href='https://twitter.com/intent/tweet?url='+u+'&text='+t;
+  $('shWa').href='https://wa.me/?text='+t+'%20'+u;
+  $('shMs').href=/Android|iPhone|iPad/i.test(navigator.userAgent)?'fb-messenger://share/?link='+u:'https://www.facebook.com/dialog/send?link='+u+'&app_id=291494419107518&redirect_uri='+u;
+  $('shMail').href='mailto:?subject='+encodeURIComponent('Te comparto The 25th Studio')+'&body='+t+'%0A'+u;
+  $('shMail').removeAttribute('target');
+
+  const modal=$('shareModal');
+  const open=()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false')};
+  const close=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true')};
+  $('shareOpen').addEventListener('click',open);
+  $('shareClose').addEventListener('click',close);
+  modal.addEventListener('click',e=>{if(e.target===modal)close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+
+  const toast=$('toast');
+  const showToast=m=>{toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)};
+  const copy=async()=>{try{await navigator.clipboard.writeText(url)}catch(e){const ta=document.createElement('textarea');ta.value=url;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}};
+  // Instagram no tiene enlace para compartir: en celular abre el menú nativo; en compu copia el link y abre los mensajes de Instagram
+  $('shIg').addEventListener('click',async e=>{
+    if(navigator.share&&/Android|iPhone|iPad/i.test(navigator.userAgent)){
+      e.preventDefault();
+      try{await navigator.share({title:'The 25th Studio',text:txt,url})}catch(_){}
+    }else{
+      await copy();showToast('Enlace copiado, pégalo en tu mensaje de Instagram');
+    }
+  });
+  $('copyUrl').addEventListener('click',async()=>{await copy();showToast('Enlace copiado')});
+})();
+</script>
+</body>
+</html>
